@@ -31,11 +31,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
 
           <div className="flex items-center gap-4 z-10">
-            <Button variant="outline" className="hidden sm:flex border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-none font-mono text-xs uppercase tracking-wider">
-              Login
-            </Button>
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-mono text-xs uppercase tracking-wider font-bold">
-              Get Started →
+            <Button 
+              className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-mono text-xs uppercase tracking-wider font-bold"
+              onClick={() => window.open('https://cal.com/foundation-tech/consultation', '_blank')}
+            >
+              Book Consultation →
             </Button>
           </div>
         </div>

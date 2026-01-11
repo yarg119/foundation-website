@@ -34,11 +34,20 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none h-14 px-8 font-mono text-sm uppercase tracking-wider font-bold">
-                Get Free Consultation
+              <Button 
+                size="lg" 
+                className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none h-14 px-8 font-mono text-sm uppercase tracking-wider font-bold"
+                onClick={() => window.open('https://cal.com/foundation-tech/consultation', '_blank')}
+              >
+                Book Consultation
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-none h-14 px-8 font-mono text-sm uppercase tracking-wider">
-                Explore Platform
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-none h-14 px-8 font-mono text-sm uppercase tracking-wider"
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Explore Services
               </Button>
             </div>
             
@@ -145,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* Value Props - Swiss Grid */}
-      <section className="py-24 border-b border-border">
+      <section id="results" className="py-24 border-b border-border">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-12">
@@ -194,8 +203,8 @@ export default function Home() {
                 
                 <div className="relative z-10 grid grid-cols-2 gap-8 pt-12 border-t border-white/20">
                   <div>
-                    <div className="text-4xl font-bold text-accent mb-1">$500K+</div>
-                    <div className="text-xs font-mono opacity-70">MONTHLY PROCESSED</div>
+                    <div className="text-4xl font-bold text-accent mb-1">100%</div>
+                    <div className="text-xs font-mono opacity-70">ON-TIME DELIVERY</div>
                   </div>
                   <div>
                     <div className="text-4xl font-bold text-accent mb-1">0%</div>
@@ -258,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
+      <section id="about" className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img src="/images/hero-bg.jpg" alt="" className="w-full h-full object-cover" />
         </div>
@@ -272,11 +281,20 @@ export default function Home() {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none h-16 px-10 font-mono text-base uppercase tracking-wider font-bold">
-              Get Free Consultation
+            <Button 
+              size="lg" 
+              className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none h-16 px-10 font-mono text-base uppercase tracking-wider font-bold"
+              onClick={() => window.open('https://cal.com/foundation-tech/consultation', '_blank')}
+            >
+              Book Consultation
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary rounded-none h-16 px-10 font-mono text-base uppercase tracking-wider">
-              Calculate Your ROI
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-primary rounded-none h-16 px-10 font-mono text-base uppercase tracking-wider"
+              onClick={() => document.getElementById('results')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              View Results
             </Button>
           </div>
         </div>
