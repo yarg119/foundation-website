@@ -103,20 +103,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-mono text-accent text-sm mb-6 uppercase tracking-wider">Services</h3>
               <ul className="space-y-3 text-sm text-primary-foreground/80">
-                <li><a href="#" className="hover:text-white transition-colors">Process Automation</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">AI Solutions</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">System Integration</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Custom Software</a></li>
+                <li><Link href="#services"><a className="hover:text-white transition-colors">Process Automation</a></Link></li>
+                <li><Link href="#services"><a className="hover:text-white transition-colors">AI Solutions</a></Link></li>
+                <li><Link href="#services"><a className="hover:text-white transition-colors">System Integration</a></Link></li>
+                <li><Link href="#services"><a className="hover:text-white transition-colors">Custom Software</a></Link></li>
               </ul>
             </div>
             
             <div>
               <h3 className="font-mono text-accent text-sm mb-6 uppercase tracking-wider">Company</h3>
               <ul className="space-y-3 text-sm text-primary-foreground/80">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Case Studies</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                <li><Link href="#about"><a className="hover:text-white transition-colors">About Us</a></Link></li>
+                <li><Link href="#results"><a className="hover:text-white transition-colors">Case Studies</a></Link></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
             
@@ -126,21 +125,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li>Louisiana, USA</li>
                 <li>Remote Nationwide</li>
                 <li>
-                  <a href="mailto:hello@foundationtech.com" className="font-mono text-accent hover:underline">
-                    hello@foundationtech.com
+                  <a href="mailto:gray@foundationtechsystems.com" className="font-mono text-accent hover:underline break-all">
+                    gray@foundationtechsystems.com
                   </a>
                 </li>
               </ul>
             </div>
             
-            <div className="md:col-span-4 lg:col-span-1">
+            <div className="md:col-span-4 lg:col-span-1" id="contact-form">
               <h3 className="font-mono text-accent text-sm mb-6 uppercase tracking-wider">Quick Inquiry</h3>
               <ContactForm />
             </div>
           </div>
           
           <div className="mt-16 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-primary-foreground/50 font-mono">
-            <p>© 2024 FOUNDATION TECH SYSTEMS LLC. ALL RIGHTS RESERVED.</p>
+            <p>© 2025 FOUNDATION TECH SYSTEMS LLC. ALL RIGHTS RESERVED.</p>
             <div className="flex gap-8">
               <a href="#" className="hover:text-white transition-colors">PRIVACY POLICY</a>
               <a href="#" className="hover:text-white transition-colors">TERMS OF SERVICE</a>

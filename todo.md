@@ -26,3 +26,12 @@
     - [ ] Create `amplify.yml` build specification
     - [ ] Verify `package.json` build scripts
 - [ ] Final commit and push
+
+- [ ] Update Footer in Layout.tsx
+    - [ ] Change email to `gray@foundationtechsystems.com`
+    - [ ] Remap "Services" links to `#services`
+    - [ ] Remap "About Us" to `#about`
+    - [ ] Remap "Case Studies" to `#results`
+    - [ ] Remove "Careers" link
+    - [ ] Update Copyright year to 2025
+- [ ] Commit and push footer updates
