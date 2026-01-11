@@ -13,3 +13,16 @@
     - [ ] Integrate selected scheduling tool (link or embed)
     - [ ] Update all "Get Started" / "Consultation" buttons
 - [ ] Commit and push changes to GitHub
+
+- [ ] Update Cal.com link to `https://cal.com/gray-blanchard` in Layout.tsx and Home.tsx
+- [ ] Implement Formspree contact form
+    - [ ] Create ContactForm component
+    - [ ] Use endpoint `https://formspree.io/f/mnjjawnn`
+    - [ ] Add to Footer or Contact section
+- [ ] Implement Mobile Navigation
+    - [ ] Add hamburger menu icon to Layout.tsx header
+    - [ ] Create Sheet/Drawer component for mobile menu items
+- [ ] Configure for AWS Amplify
+    - [ ] Create `amplify.yml` build specification
+    - [ ] Verify `package.json` build scripts
+- [ ] Final commit and push

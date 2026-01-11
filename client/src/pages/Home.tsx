@@ -37,7 +37,7 @@ export default function Home() {
               <Button 
                 size="lg" 
                 className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none h-14 px-8 font-mono text-sm uppercase tracking-wider font-bold"
-                onClick={() => window.open('https://cal.com/foundation-tech/consultation', '_blank')}
+                onClick={() => window.open('https://cal.com/gray-blanchard', '_blank')}
               >
                 Book Consultation
               </Button>
@@ -284,7 +284,7 @@ export default function Home() {
             <Button 
               size="lg" 
               className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none h-16 px-10 font-mono text-base uppercase tracking-wider font-bold"
-              onClick={() => window.open('https://cal.com/foundation-tech/consultation', '_blank')}
+              onClick={() => window.open('https://cal.com/gray-blanchard', '_blank')}
             >
               Book Consultation
             </Button>

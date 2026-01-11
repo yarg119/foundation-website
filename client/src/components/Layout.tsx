@@ -1,7 +1,12 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import { useState } from "react";
+import ContactForm from "./ContactForm";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-accent selection:text-accent-foreground">
       {/* Swiss Style Grid Lines - Vertical */}
@@ -32,11 +37,46 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <div className="flex items-center gap-4 z-10">
             <Button 
-              className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-mono text-xs uppercase tracking-wider font-bold"
-              onClick={() => window.open('https://cal.com/foundation-tech/consultation', '_blank')}
+              className="hidden sm:flex bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-mono text-xs uppercase tracking-wider font-bold"
+              onClick={() => window.open('https://cal.com/gray-blanchard', '_blank')}
             >
               Book Consultation →
             </Button>
+
+            {/* Mobile Menu */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden text-foreground">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-l border-border p-0">
+                <div className="flex flex-col h-full p-6">
+                  <div className="flex items-center gap-2 font-bold text-xl tracking-tighter mb-12">
+                    <div className="w-8 h-8 bg-primary flex items-center justify-center text-primary-foreground">
+                      <span className="font-mono text-lg">F</span>
+                    </div>
+                    <span>FOUNDATION<span className="text-muted-foreground font-normal">TECH</span></span>
+                  </div>
+                  
+                  <nav className="flex flex-col gap-6 text-lg font-medium">
+                    <Link href="#services" onClick={() => setIsOpen(false)}><a className="hover:text-accent transition-colors">SERVICES</a></Link>
+                    <Link href="#how-it-works" onClick={() => setIsOpen(false)}><a className="hover:text-accent transition-colors">PROCESS</a></Link>
+                    <Link href="#results" onClick={() => setIsOpen(false)}><a className="hover:text-accent transition-colors">RESULTS</a></Link>
+                    <Link href="#about" onClick={() => setIsOpen(false)}><a className="hover:text-accent transition-colors">ABOUT</a></Link>
+                  </nav>
+
+                  <div className="mt-auto pt-8 border-t border-border">
+                    <Button 
+                      className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-none font-mono text-xs uppercase tracking-wider font-bold h-12"
+                      onClick={() => window.open('https://cal.com/gray-blanchard', '_blank')}
+                    >
+                      Book Consultation
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </header>
@@ -47,7 +87,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <footer className="border-t border-border bg-primary text-primary-foreground z-10 relative">
         <div className="container py-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12">
             <div className="space-y-4">
               <div className="flex items-center gap-2 font-bold text-xl tracking-tighter">
                 <div className="w-8 h-8 bg-accent flex items-center justify-center text-accent-foreground">
@@ -82,15 +122,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             
             <div>
               <h3 className="font-mono text-accent text-sm mb-6 uppercase tracking-wider">Connect</h3>
-              <ul className="space-y-3 text-sm text-primary-foreground/80">
+              <ul className="space-y-3 text-sm text-primary-foreground/80 mb-8">
                 <li>Louisiana, USA</li>
                 <li>Remote Nationwide</li>
-                <li className="pt-4">
+                <li>
                   <a href="mailto:hello@foundationtech.com" className="font-mono text-accent hover:underline">
                     hello@foundationtech.com
                   </a>
                 </li>
               </ul>
+            </div>
+            
+            <div className="md:col-span-4 lg:col-span-1">
+              <h3 className="font-mono text-accent text-sm mb-6 uppercase tracking-wider">Quick Inquiry</h3>
+              <ContactForm />
             </div>
           </div>
           
