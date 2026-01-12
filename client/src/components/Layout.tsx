@@ -29,10 +29,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </Link>
           
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium z-10">
-            <Link href="#services"><a className="hover:text-accent transition-colors">SERVICES</a></Link>
-            <Link href="#how-it-works"><a className="hover:text-accent transition-colors">PROCESS</a></Link>
-            <Link href="#results"><a className="hover:text-accent transition-colors">RESULTS</a></Link>
-            <Link href="#about"><a className="hover:text-accent transition-colors">ABOUT</a></Link>
+            <a href="#services" onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-accent transition-colors">SERVICES</a>
+            <a href="#how-it-works" onClick={(e) => { e.preventDefault(); document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-accent transition-colors">PROCESS</a>
+            <a href="#results" onClick={(e) => { e.preventDefault(); document.getElementById('results')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-accent transition-colors">RESULTS</a>
+            <a href="#about" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-accent transition-colors">ABOUT</a>
           </nav>
 
           <div className="flex items-center gap-4 z-10">
@@ -60,10 +60,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </div>
                   
                   <nav className="flex flex-col gap-6 text-lg font-medium">
-                    <Link href="#services" onClick={() => setIsOpen(false)}><a className="hover:text-accent transition-colors">SERVICES</a></Link>
-                    <Link href="#how-it-works" onClick={() => setIsOpen(false)}><a className="hover:text-accent transition-colors">PROCESS</a></Link>
-                    <Link href="#results" onClick={() => setIsOpen(false)}><a className="hover:text-accent transition-colors">RESULTS</a></Link>
-                    <Link href="#about" onClick={() => setIsOpen(false)}><a className="hover:text-accent transition-colors">ABOUT</a></Link>
+                    <a href="#services" onClick={(e) => { e.preventDefault(); setIsOpen(false); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-accent transition-colors">SERVICES</a>
+                    <a href="#how-it-works" onClick={(e) => { e.preventDefault(); setIsOpen(false); document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-accent transition-colors">PROCESS</a>
+                    <a href="#results" onClick={(e) => { e.preventDefault(); setIsOpen(false); document.getElementById('results')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-accent transition-colors">RESULTS</a>
+                    <a href="#about" onClick={(e) => { e.preventDefault(); setIsOpen(false); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-accent transition-colors">ABOUT</a>
                   </nav>
 
                   <div className="mt-auto pt-8 border-t border-border">
@@ -103,18 +103,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h3 className="font-mono text-accent text-sm mb-6 uppercase tracking-wider">Services</h3>
               <ul className="space-y-3 text-sm text-primary-foreground/80">
-                <li><Link href="#services"><a className="hover:text-white transition-colors">Process Automation</a></Link></li>
-                <li><Link href="#services"><a className="hover:text-white transition-colors">AI Solutions</a></Link></li>
-                <li><Link href="#services"><a className="hover:text-white transition-colors">System Integration</a></Link></li>
-                <li><Link href="#services"><a className="hover:text-white transition-colors">Custom Software</a></Link></li>
+                <li><a href="#services" onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-white transition-colors">Process Automation</a></li>
+                <li><a href="#services" onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-white transition-colors">AI Solutions</a></li>
+                <li><a href="#services" onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-white transition-colors">System Integration</a></li>
+                <li><a href="#services" onClick={(e) => { e.preventDefault(); document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-white transition-colors">Custom Software</a></li>
               </ul>
             </div>
             
             <div>
               <h3 className="font-mono text-accent text-sm mb-6 uppercase tracking-wider">Company</h3>
               <ul className="space-y-3 text-sm text-primary-foreground/80">
-                <li><Link href="#about"><a className="hover:text-white transition-colors">About Us</a></Link></li>
-                <li><Link href="#results"><a className="hover:text-white transition-colors">Case Studies</a></Link></li>
+                <li><a href="#about" onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#results" onClick={(e) => { e.preventDefault(); document.getElementById('results')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-white transition-colors">Case Studies</a></li>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' }); }} className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>

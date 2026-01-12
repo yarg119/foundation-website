@@ -231,7 +231,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 relative">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {/* Connecting Line */}
             <div className="absolute top-12 left-0 w-full h-px bg-border hidden md:block -z-10"></div>
             
@@ -239,17 +239,22 @@ export default function Home() {
               {
                 step: "01",
                 title: "Discovery",
-                desc: "Free consultation to identify bottlenecks and map out your current workflows."
+                desc: "We start with a deep dive into your operations. We identify bottlenecks, map out your current workflows, and pinpoint exactly where automation can save you the most time and money."
               },
               {
                 step: "02",
-                title: "Build",
-                desc: "Custom solution built in 2-3 weeks with regular updates and feedback loops."
+                title: "Strategy",
+                desc: "We design a custom roadmap tailored to your business goals. You'll get a clear plan of action, technology selection, and a timeline for implementation."
               },
               {
                 step: "03",
+                title: "Build",
+                desc: "Our engineers build your custom solution in 2-3 weeks. We use rapid development cycles with regular updates and feedback loops to ensure the final product fits your needs perfectly."
+              },
+              {
+                step: "04",
                 title: "Launch",
-                desc: "Full training, documentation, and ongoing support to ensure success."
+                desc: "We handle the deployment, provide full training for your team, and offer ongoing support. We ensure your new system runs smoothly so you can focus on growth."
               }
             ].map((item, i) => (
               <div key={i} className="bg-background border border-border p-8 relative">
@@ -266,8 +271,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About / Mission Section */}
+      <section id="about" className="py-24 bg-background border-b border-border">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-sm font-mono text-accent-foreground uppercase tracking-wider">Our Mission</h2>
+            <h3 className="text-3xl md:text-5xl font-bold tracking-tighter leading-tight">
+              HELPING BUSINESSES SAVE <span className="text-primary">TIME</span>, <span className="text-primary">MONEY</span>, AND <span className="text-primary">MENTAL ENERGY</span>.
+            </h3>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              We believe that technology should serve you, not the other way around. Our goal is to provide high-impact automation and software solutions at a reasonable cost, freeing you from the grind of manual work so you can focus on what truly matters.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section id="about" className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
+      <section className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img src="/images/hero-bg.jpg" alt="" className="w-full h-full object-cover" />
         </div>

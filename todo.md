@@ -35,3 +35,13 @@
     - [ ] Remove "Careers" link
     - [ ] Update Copyright year to 2025
 - [ ] Commit and push footer updates
+
+- [ ] Fix Navigation Scrolling
+    - [ ] Ensure `Layout.tsx` links use correct anchor IDs
+    - [ ] Verify `Home.tsx` sections have matching IDs
+    - [ ] Implement smooth scrolling behavior
+- [ ] Expand Process Section in `Home.tsx`
+    - [ ] Add detailed descriptions for Discovery, Strategy, Build, Launch
+- [ ] Add Mission Statement to `Home.tsx`
+    - [ ] Update About section with "saving time, money, and mental energy" messaging
+- [ ] Commit and push updates
